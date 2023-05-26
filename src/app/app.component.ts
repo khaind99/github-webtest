@@ -5,19 +5,16 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-
-
 export class AppComponent implements OnInit {
   title = 'Em thích ăn Rau';
-  
-    tongSL:number=0; 
-    tongTienGH:number=0;
-    ganSL_TT_GH(data=[0,0])
-    {//giả định component con bắn ra array data có 2 phần từ
-      this.tongSL = data [0];
-      this.tongTienGH= data[1];
-    
-  };
+
+  tongSL: number = 0;
+  tongTienGH: number = 0;
+  ganSL_TT_GH(data = [0, 0]) {
+    //giả định component con bắn ra array data có 2 phần từ
+    this.tongSL = data[0];
+    this.tongTienGH = data[1];
+  }
   arrProduct = [
     {
       first: 'Thiện Lương',
@@ -43,14 +40,6 @@ export class AppComponent implements OnInit {
         'https://icons.veryicon.com/png/o/culture/little-fake-brother_-zodiac_-icon049/cattle-18.png',
       icon: 'rtghrèđf',
     },
-    {
-      first: 'Larry the Bird',
-      last: 'ABC',
-      handle: '@twitter',
-      image: 'https://cdn-amz.woka.io/images/I/81Vr0-VQhOL.jpg',
-      icon: 'clgt',
-    },
-  
   ];
 
   ngOnInit() {
