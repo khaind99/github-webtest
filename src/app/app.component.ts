@@ -1,14 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
+
+
 export class AppComponent implements OnInit {
   title = 'Em thích ăn Rau';
-  tongSL: number = 5;
-  tongTienGH: number = 350000;
+  
+    tongSL:number=0; 
+    tongTienGH:number=0;
+    ganSL_TT_GH(data=[0,0])
+    {//giả định component con bắn ra array data có 2 phần từ
+      this.tongSL = data [0];
+      this.tongTienGH= data[1];
+    
+  };
   arrProduct = [
     {
       first: 'Thiện Lương',
@@ -41,6 +50,7 @@ export class AppComponent implements OnInit {
       image: 'https://cdn-amz.woka.io/images/I/81Vr0-VQhOL.jpg',
       icon: 'clgt',
     },
+  
   ];
 
   ngOnInit() {
