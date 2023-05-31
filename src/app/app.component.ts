@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
     this.tongSL = data[0];
     this.tongTienGH = data[1];
   }
-  message: string;
+  message:string;
 
   constructor(private data: DuLieuTongService) { }
 

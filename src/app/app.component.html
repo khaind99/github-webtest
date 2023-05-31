@@ -1,3 +1,5 @@
+<p>{{ message }}</p>
+
 <div class="toolbar" role="banner">
   <img
     width="40"
@@ -78,7 +80,6 @@
   </table>
 </div>
 
-
 <button
   type="button"
   class="btn btn-outline-primary"
@@ -88,18 +89,14 @@
 </button>
 <button type="button" class="btn btn-outline-secondary">Free</button>
 
-
 <app-child></app-child>
 
-<app-giohang-tong [tongSL]="tongSL" [tongTienGH]="tongTienGH"></app-giohang-tong>
-<br>
-<app-giohang (capnhatGH) ="ganSL_TT_GH($event)"></app-giohang>
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<app-giohang-tong
+  [tongSL]="tongSL"
+  [tongTienGH]="tongTienGH"
+></app-giohang-tong>
+<br />
+<app-giohang (capnhatGH)="ganSL_TT_GH($event)"></app-giohang>
+
 
 <router-outlet></router-outlet>

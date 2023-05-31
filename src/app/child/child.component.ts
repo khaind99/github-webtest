@@ -6,7 +6,8 @@ import { DuLieuTongService } from '../du-lieu-tong.service';
   styleUrls: ['./child.component.css'],
 })
 export class ChildComponent implements OnInit {
-  @Input() childMessage: string = '';
+  
+  message:string;
 
   constructor(private data: DuLieuTongService) {}
 
