@@ -15,6 +15,6 @@ export class ChildComponent implements OnInit {
   }
 
   newMessage() {
-    this.data.changeMessage('Hello from Sibling');
+    this.data.changeMessage('Surprise Motherfucker');
   }
 }
