@@ -7,12 +7,17 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ChildComponent } from './child/child.component';
 import { GiohangTongComponent } from './giohang-tong/giohang-tong.component';
 import { GiohangComponent } from './giohang/giohang.component';
-
+import { DuLieuTongService } from './du-lieu-tong.service';
 
 @NgModule({
-  declarations: [AppComponent, ChildComponent,GiohangTongComponent,GiohangComponent],
+  declarations: [
+    AppComponent,
+    ChildComponent,
+    GiohangTongComponent,
+    GiohangComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, NgbModule],
-  providers: [],
+  providers: [DuLieuTongService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

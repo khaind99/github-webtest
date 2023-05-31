@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-
+import { DuLieuTongService } from './du-lieu-tong.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -15,6 +15,10 @@ export class AppComponent implements OnInit {
     this.tongSL = data[0];
     this.tongTienGH = data[1];
   }
+  message: string;
+
+  constructor(private data: DuLieuTongService) { }
+
   arrProduct = [
     {
       first: 'Thiện Lương',
@@ -44,6 +48,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     console.log('abc', this.title);
+    this.data.currentMessage.subscribe(message => this.message = message);
   }
 }
 
