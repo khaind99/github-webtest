@@ -6,17 +6,15 @@ import { DuLieuTongService } from '../du-lieu-tong.service';
   styleUrls: ['./child.component.css'],
 })
 export class ChildComponent implements OnInit {
-  
-  message:string;
+  message: string = '';
 
   constructor(private data: DuLieuTongService) {}
 
   ngOnInit() {
-    this.data.currentMessage.subscribe(message => this.message = message);
+    this.data.currentMessage.subscribe((message) => (this.message = message));
   }
 
   newMessage() {
     this.data.changeMessage('Hello from Sibling');
-  
   }
 }

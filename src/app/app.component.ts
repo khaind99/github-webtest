@@ -15,9 +15,9 @@ export class AppComponent implements OnInit {
     this.tongSL = data[0];
     this.tongTienGH = data[1];
   }
-  message:string;
+  message: string = '';
 
-  constructor(private data: DuLieuTongService) { }
+  constructor(private data: DuLieuTongService) {}
 
   arrProduct = [
     {
@@ -48,7 +48,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     console.log('abc', this.title);
-    this.data.currentMessage.subscribe(message => this.message = message);
+    this.data.currentMessage.subscribe((message) => (this.message = message));
   }
 }
 
